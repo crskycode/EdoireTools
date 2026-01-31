@@ -8,11 +8,6 @@ namespace ArchiveTool
     {
         public static void WriteShortString(this BinaryWriter writer, string value)
         {
-            if (value.Length > byte.MaxValue)
-            {
-                throw new Exception("String too long.");
-            }
-
             if (value.Length == 0)
             {
                 writer.Write((byte)0);
@@ -20,6 +15,12 @@ namespace ArchiveTool
             }
 
             var buffer = Encoding.UTF8.GetBytes(value);
+
+            if (buffer.Length > byte.MaxValue)
+            {
+                throw new Exception("String too long.");
+            }
+
             var length = (byte)buffer.Length;
 
             writer.Write(length);
