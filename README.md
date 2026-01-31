@@ -1,6 +1,6 @@
 # Edoire Tools
 
-This toolkit is designed for modifying games developed with the Edoire's Unity game.
+This toolkit is designed for modifying Unity games developed with the Edoire.
 
 ## Resource Packs
 
