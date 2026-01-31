@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ArchiveTool/ArchiveTool.csproj" />
+  <Project Path="DataPackTool/DataPackTool.csproj" />
+</Solution>
